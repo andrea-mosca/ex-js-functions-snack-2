@@ -31,9 +31,22 @@
 // Scrivi una funzione creaTimer che accetta un tempo (in ms)
 // e restituisce una nuova funzione che avvia un setTimeout
 // per stampare "Tempo scaduto!".
-const creaTimer = (ms) => {
-  setTimeout(() => {
-    console.log("tempo scaduto");
-  }, ms);
+// const creaTimer = (ms) => {
+//   setTimeout(() => {
+//     console.log("tempo scaduto");
+//   }, ms);
+// };
+// creaTimer(2000);
+
+// * SNACK 5
+// Definisci una funzione che accetta un messaggio
+//  e lo stampa ogni secondo.
+// Nota: Questa funzione creerà un loop infinito.
+//  Interrompilo manualmente o usa clearInterval() in un altro script.
+
+const stampaOgniSecondo = (messaggio) => {
+  setInterval(() => {
+    console.log(messaggio);
+  }, 1000);
 };
-creaTimer(2000);
+stampaOgniSecondo("ciao");
