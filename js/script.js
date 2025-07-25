@@ -74,13 +74,32 @@
 // un tempo di avvio e un tempo di stop.
 // Il messaggio deve essere stampato a intervalli regolari,
 //  ma si deve fermare dopo il tempo di stop.
-function eseguiEferma(messaggio, avvio, stop) {
-  const intervalId = setInterval(() => {
-    console.log(messaggio);
-  }, avvio);
+// function eseguiEferma(messaggio, avvio, stop) {
+//   const intervalId = setInterval(() => {
+//     console.log(messaggio);
+//   }, avvio);
 
+//   setTimeout(() => {
+//     clearInterval(intervalId);
+//   }, stop);
+// }
+// eseguiEferma("ciao", 2000, 10000);
+
+// SNACK 8
+// Crea una funzione che simula un conto alla rovescia:
+//  Scrivi una funzione contoAllaRovescia che accetta
+// un numero n e stampa il conto alla rovescia da n a 0,
+// con un intervallo di 1 secondo tra ogni numero.
+// Quando arriva a 0, stampa "Tempo scaduto!" e interrompe il timer
+
+function contoAllaRovescia(n) {
+  const intervallo = setInterval(() => {
+    console.log(n);
+    n = n - 1;
+  }, 1000);
   setTimeout(() => {
-    clearInterval(intervalId);
-  }, stop);
+    clearInterval(intervallo);
+    console.log("Tempo scaduto!");
+  }, n * 1000);
 }
-eseguiEferma("ciao", 2000, 10000);
+contoAllaRovescia(5);
