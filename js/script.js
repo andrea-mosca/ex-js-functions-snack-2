@@ -1,6 +1,6 @@
 // * SNACK 1
 // somma dichiarativa
-const somma = function (numOne, numTwo) {
-  return numOne + numTwo;
-};
-console.log(somma(2, 6));
+function somma(numOne, numTwo) {
+  console.log(numOne + numTwo);
+}
+somma(2, 6);
