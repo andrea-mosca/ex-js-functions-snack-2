@@ -92,14 +92,41 @@
 // con un intervallo di 1 secondo tra ogni numero.
 // Quando arriva a 0, stampa "Tempo scaduto!" e interrompe il timer
 
-function contoAllaRovescia(n) {
-  const intervallo = setInterval(() => {
-    console.log(n);
-    n = n - 1;
-  }, 1000);
-  setTimeout(() => {
-    clearInterval(intervallo);
-    console.log("Tempo scaduto!");
-  }, n * 1000);
+// function contoAllaRovescia(n) {
+//   const intervallo = setInterval(() => {
+//     console.log(n);
+//     n = n - 1;
+//   }, 1000);
+//   setTimeout(() => {
+//     clearInterval(intervallo);
+//     console.log("Tempo scaduto!");
+//   }, n * 1000);
+// }
+// contoAllaRovescia(5);
+
+// * SNACK 9
+// Creare una funzione che esegue una sequenza di operazioni con ritardi:
+//  Scrivi una funzione sequenzaOperazioni che accetta un array di operazioni
+//  (funzioni) e un tempo di intervallo.
+// Ogni operazione deve essere eseguita in sequenza
+//  con un ritardo uguale al tempo di intervallo.
+
+function sequenzaOperazioni(operazioni, intervallo) {
+  let i = 0;
+  const ritardo = setInterval(() => {
+    operazioni[i]();
+    i++;
+    if (i >= operazioni.length) {
+      clearInterval(ritardo);
+    }
+  }, intervallo);
 }
-contoAllaRovescia(5);
+
+sequenzaOperazioni(
+  [
+    () => console.log("somma"),
+    () => console.log("moltiplicazione"),
+    () => console.log("divisione"),
+  ],
+  2000
+);
