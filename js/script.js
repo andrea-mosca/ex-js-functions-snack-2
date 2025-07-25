@@ -12,7 +12,7 @@
 // somma(3, 6);
 
 // funzione somma con arrow function
-const somma = (numOne, numTwo) => numOne + numTwo;
+// const somma = (numOne, numTwo) => numOne + numTwo;
 // console.log(somma(7, 10));
 
 // * SNACK 2
@@ -24,5 +24,16 @@ const somma = (numOne, numTwo) => numOne + numTwo;
 // Definisci una funzione eseguiOperazione che accetta tre parametri:
 // due numeri e una funzione operatore (callback).
 // La funzione deve eseguire l'operazione fornita sui due numeri.
-const eseguiOperazione = (a, b, operazione) => operazione(a, b);
-console.log(eseguiOperazione(4, 5, somma));
+// const eseguiOperazione = (a, b, operazione) => operazione(a, b);
+// console.log(eseguiOperazione(4, 5, somma));
+
+// *SNACK 4
+// Scrivi una funzione creaTimer che accetta un tempo (in ms)
+// e restituisce una nuova funzione che avvia un setTimeout
+// per stampare "Tempo scaduto!".
+const creaTimer = (ms) => {
+  setTimeout(() => {
+    console.log("tempo scaduto");
+  }, ms);
+};
+creaTimer(2000);
