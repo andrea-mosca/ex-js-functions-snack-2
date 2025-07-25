@@ -74,13 +74,13 @@
 // un tempo di avvio e un tempo di stop.
 // Il messaggio deve essere stampato a intervalli regolari,
 //  ma si deve fermare dopo il tempo di stop.
-function eseguiEferma(messaggio, stop) {
+function eseguiEferma(messaggio, avvio, stop) {
   const intervalId = setInterval(() => {
     console.log(messaggio);
-  }, 1000);
+  }, avvio);
 
   setTimeout(() => {
     clearInterval(intervalId);
   }, stop);
 }
-eseguiEferma("ciao", 10000);
+eseguiEferma("ciao", 2000, 10000);
