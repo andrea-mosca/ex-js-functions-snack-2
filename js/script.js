@@ -13,9 +13,16 @@
 
 // funzione somma con arrow function
 const somma = (numOne, numTwo) => numOne + numTwo;
-console.log(somma(7, 10));
+// console.log(somma(7, 10));
 
 // * SNACK 2
 // funzione che restituisce il quadrato di un numero
-const quadrato = (n) => n * n;
-console.log(quadrato(6));
+// const quadrato = (n) => n * n;
+// console.log(quadrato(6));
+
+// * SNACK 3
+// Definisci una funzione eseguiOperazione che accetta tre parametri:
+// due numeri e una funzione operatore (callback).
+// La funzione deve eseguire l'operazione fornita sui due numeri.
+const eseguiOperazione = (a, b, operazione) => operazione(a, b);
+console.log(eseguiOperazione(4, 5, somma));
